@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	*:focus,
+	input:focus,
+	button:focus,
+	textarea:focus,
+	select:focus {
+		@apply rounded-md ring-2 ring-indigo-300 outline-none;
+	}
+	body {
+		@apply w-full max-w-[100dvw] h-full;
+	}
+
+	.ca-container {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@apply font-bold leading-none;
+		}
+
+		h2 {
+			@apply text-xl
+		}
+
+		h3 {
+			@apply text-inherit
+		}
+
+		.text-body {
+			@apply text-stone-600
+		}
+	}
+}
